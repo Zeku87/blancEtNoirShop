@@ -25,6 +25,17 @@
     "url": "https://github.com/Zeku87/blancEtNoirShop/issues"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "autoprefixer": "^7.1.4",
+    "csswring": "^6.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
   }
 }
