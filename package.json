@@ -23,5 +23,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Zeku87/blancEtNoirShop/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
