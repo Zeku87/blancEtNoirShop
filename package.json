@@ -1,0 +1,27 @@
+{
+  "name": "blancEtNoirShop",
+  "version": "0.0.0",
+  "description": "Unique design shirts shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Zeku87/blancEtNoirShop.git"
+  },
+  "keywords": [
+    "shop",
+    "e-commerce",
+    "shirts",
+    "unique",
+    "design",
+    "exclusive",
+    "amazing"
+  ],
+  "author": "Ezequiel Gallardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zeku87/blancEtNoirShop/issues"
+  }
+}
