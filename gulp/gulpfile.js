@@ -5,6 +5,7 @@ var watch = require('gulp-watch');
 var inject = require('gulp-inject');
 var autoprefixer = require('autoprefixer');
 var csswring = require('csswring');
+var cssimport = require('postcss-import');
 
 gulp.task('html', ['scss'], function(){
 
@@ -23,7 +24,7 @@ gulp.task('html', ['scss'], function(){
 });
 
 gulp.task('scss', function(){
-    var injectScssFiles = gulp.src('./src/scss/modules/*.scss');
+    var injectScssFiles = gulp.src(['./src/scss/global/*.scss','./src/scss/modules/*.scss']);
 
     function transformFilePath(filePath){
 	return '@import "' + filePath + '";';
@@ -36,7 +37,7 @@ gulp.task('scss', function(){
 	transform : transformFilePath
     };
 
-    var processors = [csswring, autoprefixer];
+    var processors = [csswring, autoprefixer, cssimport];
     
     return gulp.src('./src/scss/main.scss')
 	.pipe(inject(injectScssFiles, injectScssOptions))
@@ -52,7 +53,7 @@ gulp.task('watch', function(){
 	gulp.start('html');
     });*/
 
-    watch(['./src/scss/modules/*.scss', './src/scss/main.scss'], function(){
+    watch(['./src/index.html', './src/scss/global/*.scss', './src/scss/modules/*.scss', './src/scss/main.scss'], function(){
 	gulp.start('html');
     });
 
