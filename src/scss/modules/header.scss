@@ -1,0 +1,13 @@
+.head{
+	margin-top:25px;
+	text-align:center;
+	.logo{
+		max-width:250px;
+		display:inline-block;
+		@media screen and (max-width:$phone)
+		{
+			max-width:150px;
+		}
+		img{max-width:100%;}
+	}
+}
