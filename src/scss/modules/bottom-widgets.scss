@@ -1,0 +1,43 @@
+@import "neat";
+
+.bottom-widgets{
+	width:100%;
+	clear: left;
+	@include grid-container;
+	
+	margin-top: 1.5em;
+	.widget{
+		@include grid-column(12);
+		h3{
+			background: $brown;
+			color: white;
+			padding: 1em .75em;
+		}
+		ul{
+			font-size: 80;
+			list-style:square inside;
+			margin: 0;
+			padding: 0 1em;
+			li{
+				&:last-child a{ border-bottom: none; }
+				a{
+					color:$gray-dark;
+					text-decoration:none;
+					display:block;
+					padding:1em 0;
+					border-bottom: 1px solid rgba(0,0,0, .10);
+				}
+			}
+		}
+		@media screen and (min-width:$tablet)
+		{
+			@include grid-column(6);
+		}
+
+		@media screen and (min-width:$pc)
+		{
+			@include grid-column(3);
+		}
+
+	}
+}
