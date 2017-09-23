@@ -16,25 +16,25 @@ img{max-width:100%;}
 }
 
 .grid{
-	@include grid-column(9);
+	@include grid-column(12);
 	padding-top: 1.5em;
-	@media screen and (max-width:$tablet){
+	@media screen and (min-width:$tablet){
 		@include grid-column(8);
 		padding-top:0;
 	}
-	@media screen and (max-width:$phone){
-		@include grid-column(12);
+	@media screen and (min-width:$pc){
+		@include grid-column(8);
 	}
 }
 
 .sidebar{
-	@include grid-column(3);
+	@include grid-column(12);
 	margin-top:1.5em;
-	@media screen and (max-width:$tablet){
+	@media screen and (min-width:$tablet){
 		@include grid-column(4);
 		padding-top:0;
 	}
-	@media screen and (max-width:$phone){
-		@include grid-column(12);
+	@media screen and (min-width:$pc){
+		@include grid-column(4);
 	}
 }

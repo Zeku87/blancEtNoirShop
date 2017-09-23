@@ -9,7 +9,8 @@ nav{
 	a{
 		display:inline-block;
 		margin-left:-4px;
-		padding:1em 2.5em;
+		padding:1em 1em;
+		font-size: .85em;
 		text-decoration:none;
 		color:white;
 		text-transform:uppercase;
@@ -18,10 +19,10 @@ nav{
 			background:darken($brown,8%);
 		}
 		
-		@media screen and (max-width:$phone)
+		@media screen and (min-width:$tablet)
 		{
-			padding:1em 1em;
-			font-size: .85em;
+			padding:1em 2.5em;
+			font-size: 1em;
 		}
 	}
 }

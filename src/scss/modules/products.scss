@@ -2,7 +2,7 @@
 
 .product{
 	background-color:white;
-	@include grid-column(3);
+	@include grid-column(11);
 	@include grid-push(1);
 	margin-bottom:15px;
 	text-align:center;
@@ -33,11 +33,27 @@
 		border:none;
 		
 	}
+	img{
+		max-width:35%;
+	}
 	
-	@media screen and (max-width:$tablet){
+	@media screen and (min-width:$tablet){
 	       @include grid-column(5);
 	       @include grid-push(1);
 	       margin-top: 15px;
+	       img{
+			min-width:100%;
+	       }
 	}
+
+	@media screen and (min-width:$pc){
+	       @include grid-column(3);
+	       margin-top: 15px;
+       	       img{
+			min-width:100%;
+	       }
+
+	}
+
 
 }

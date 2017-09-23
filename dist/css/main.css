@@ -259,7 +259,42 @@ menu {
  * Add the correct display in IE 10-.
  */[hidden] {
   display: none;
-}.head {
+}.bottom-widgets {
+  width: 100%;
+  clear: left;
+  margin-top: 1.5em; }.bottom-widgets::after {
+    clear: both;
+    content: "";
+    display: block; }.bottom-widgets .widget {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; }.bottom-widgets .widget h3 {
+      background: #272422;
+      color: white;
+      padding: 1em .75em; }.bottom-widgets .widget ul {
+      font-size: 80;
+      list-style: square inside;
+      margin: 0;
+      padding: 0 1em; }.bottom-widgets .widget ul li:last-child a {
+        border-bottom: none; }.bottom-widgets .widget ul li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        padding: 1em 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }@media screen and (min-width: 800px) {
+      .bottom-widgets .widget {
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 20px; } }@media screen and (min-width: 1000px) {
+      .bottom-widgets .widget {
+        width: calc(25% - 25px);
+        float: left;
+        margin-left: 20px; } }.foot {
+  background: black;
+  padding: 1em 0 2em;
+  color: #555; }.foot p {
+    font-size: 80%;
+    text-align: center; }.head {
   margin-top: 25px;
   text-align: center; }.head .logo {
     max-width: 250px;
@@ -273,30 +308,30 @@ menu {
           box-sizing: border-box; }.wrap {
   max-width: 1600px;
   margin: 0 auto; }.grid {
-  width: calc(75% - 35px);
+  width: calc(100% - 40px);
   float: left;
   margin-left: 20px;
-  padding-top: 1.5em; }@media screen and (max-width: 800px) {
+  padding-top: 1.5em; }@media screen and (min-width: 800px) {
     .grid {
       width: calc(66.66667% - 33.33333px);
       float: left;
       margin-left: 20px;
-      padding-top: 0; } }@media screen and (max-width: 500px) {
+      padding-top: 0; } }@media screen and (min-width: 1000px) {
     .grid {
-      width: calc(100% - 40px);
+      width: calc(66.66667% - 33.33333px);
       float: left;
       margin-left: 20px; } }.sidebar {
-  width: calc(25% - 25px);
+  width: calc(100% - 40px);
   float: left;
   margin-left: 20px;
-  margin-top: 1.5em; }@media screen and (max-width: 800px) {
+  margin-top: 1.5em; }@media screen and (min-width: 800px) {
     .sidebar {
       width: calc(33.33333% - 26.66667px);
       float: left;
       margin-left: 20px;
-      padding-top: 0; } }@media screen and (max-width: 500px) {
+      padding-top: 0; } }@media screen and (min-width: 1000px) {
     .sidebar {
-      width: calc(100% - 40px);
+      width: calc(33.33333% - 26.66667px);
       float: left;
       margin-left: 20px; } }nav.top-nav {
   margin-top: 25px;
@@ -306,16 +341,17 @@ menu {
   text-align: center; }nav a {
   display: inline-block;
   margin-left: -4px;
-  padding: 1em 2.5em;
+  padding: 1em 1em;
+  font-size: .85em;
   text-decoration: none;
   color: white;
   text-transform: uppercase; }nav a:hover {
-    background: #11100f; }@media screen and (max-width: 500px) {
+    background: #11100f; }@media screen and (min-width: 800px) {
     nav a {
-      padding: 1em 1em;
-      font-size: .85em; } }.product {
+      padding: 1em 2.5em;
+      font-size: 1em; } }.product {
   background-color: white;
-  width: calc(25% - 25px);
+  width: calc(91.66667% - 38.33333px);
   float: left;
   margin-left: 20px;
   margin-left: calc(8.33333% - 21.66667px + 40px);
@@ -336,13 +372,23 @@ menu {
     background-color: black;
     color: white;
     padding: .75em 0;
-    border: none; }@media screen and (max-width: 800px) {
+    border: none; }.product img {
+    max-width: 35%; }@media screen and (min-width: 800px) {
     .product {
       width: calc(41.66667% - 28.33333px);
       float: left;
       margin-left: 20px;
       margin-left: calc(8.33333% - 21.66667px + 40px);
-      margin-top: 15px; } }.sidebar {
+      margin-top: 15px; }
+      .product img {
+        min-width: 100%; } }@media screen and (min-width: 1000px) {
+    .product {
+      width: calc(25% - 25px);
+      float: left;
+      margin-left: 20px;
+      margin-top: 15px; }
+      .product img {
+        min-width: 100%; } }.sidebar {
   color: white;
   -webkit-box-shadow: -4px 0 10px -2px rgba(0, 0, 0, 0.15);
           box-shadow: -4px 0 10px -2px rgba(0, 0, 0, 0.15); }.sidebar .widget {
