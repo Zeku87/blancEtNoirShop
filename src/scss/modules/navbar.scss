@@ -1,4 +1,9 @@
+@import "neat";
+
 nav{
+	@include grid-container;
+	clear: left;
+	
 	&.top-nav{
 		margin-top:25px;
 		background:$brown;
@@ -11,7 +16,7 @@ nav{
 		margin-left:-4px;
 		padding:1em 1em;
 		font-size: .85em;
-		text-decoration:none;
+		text-decoratioºn:none;
 		color:white;
 		text-transform:uppercase;
 

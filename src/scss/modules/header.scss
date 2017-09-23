@@ -1,13 +1,39 @@
+@import "neat";
+
 .head{
-	margin-top:25px;
-	text-align:center;
-	.logo{
-		max-width:250px;
-		display:inline-block;
-		@media screen and (max-width:$phone)
-		{
+	ul{
+	  list-style:none;
+	  margin-top:25px;
+	  text-align:center;
+		.logo{
 			max-width:150px;
+			display:inline-block;
+			@media screen and (min-width:$tablet){
+				max-width:250px;
+				img{max-width:100%;}
+			}
 		}
-		img{max-width:100%;}
+		.head_logo{
+			@include grid-column(4);
+			margin-bottom: 1em;
+			@media screen and (min-width:$pc){
+			       @include grid-column(5);
+			       text-align:right;
+			}
+
+		}
+		
+	  	.head_title{
+			@include grid-column(8);
+			font-family: "Pacifico", cursive;
+			font-size: 2.5em;
+			@media screen and (min-width:$tablet){
+				font-size: 4em;
+			}
+			@media screen and (min-width:$pc){
+			       @include grid-column(7);
+			       text-align:left;
+			}
+		}
 	}
 }
