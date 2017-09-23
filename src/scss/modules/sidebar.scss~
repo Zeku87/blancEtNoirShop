@@ -1,6 +1,0 @@
-@import "neat";
-
-.sidebar{
-	color:white;
-	box-shadow: -4px 0 10px -2px rgba(black, 0.15);
-}
