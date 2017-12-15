@@ -8,7 +8,7 @@ var autoprefixer = require('autoprefixer');
 //var csswring = require('csswring');
 var cssimport = require('postcss-import'); //to import normalize once sass is compiled
 
-gulp.task('html', ['scss'], function(){
+gulp.task('html', ['scss', 'js'], function(){
 
     var injectCssFiles = gulp.src('./dist/css/*.css');
 
@@ -49,13 +49,13 @@ gulp.task('scss', function(){
 	.pipe(gulp.dest('./dist/css'));    
 });
 
-gulp.task('watch', function(){
-    
-    /*watch('./src/index.html', function(){
-	gulp.start('html');
-    });*/
+gulp.task('js', () => {
+	return gulp.src('./src/js/app.js').pipe(gulp.dest('./dist/js'));
+});
 
-    watch(['./src/index.html', './src/scss/global/*.scss', './src/scss/modules/*.scss', './src/scss/main.scss'], function(){
+gulp.task('watch', function(){
+
+    watch(['./src/index.html', './src/scss/global/*.scss', './src/scss/modules/*.scss', './src/scss/main.scss', './src/js/**.js'], function(){
 	gulp.start('html');
     });
 
